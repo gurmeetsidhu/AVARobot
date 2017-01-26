@@ -1,0 +1,6 @@
+future
+Pillow
+xmltodict
+wheel
+matplotlib
+EasyDict
