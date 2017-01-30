@@ -1,0 +1,23 @@
+install git: https://git-scm.com/downloads
+then go to and install 64 bit python 3.4 env: https://www.python.org/downloads/release/python-342/
+install conda on 3.5 I guess: https://www.continuum.io/downloads
+clone repo into directory: git clone git@github.com:gurmeetsidhu/AVARobot.git
+install CNTK: https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine (good luck this one was brutal, I suggest manual but its your choice)
+
+right click computer>advanced system settings>environment variables>edit or (new variable if not there) PATH and add c:\Python34; C:\Python34\Scripts; C:\Users\canad\Anaconda3; C:\Users\canad\Anaconda3\Scripts; C:\Users\canad\Anaconda3\pkgs\python-3.4.3-5\libs
+test so far if this is right by closing all cmds and going to start>cmd>enter then write python and/or pip -V
+Both should open a python environment that says Python 3.4.2 any issues up till here let me know.
+
+Once done run: 
+conda create --name cntk python=3.4.3 numpy scipy
+activate cntk
+and: pip install -r requirements.txt
+
+install all from base directory:
+pip install your_download_folder/scikit_image-0.12.3-cp34-cp34m-win_amd64.whl
+pip install your_download_folder/opencv_python-3.1.0-cp34-cp34m-win_amd64.whl
+
+Edit PARAMETERS.py, and set datasetName to "grocery" within the file.
+then run: python A1_GenerateInputROIs.py
+python B1_VisualizeInputROIs.py
+python B2_EvaluateInputROIs.py
